@@ -12,20 +12,9 @@ const Newsletter = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false); // State til at styre, om modal-vinduet er åbent eller lukket.
 
-  const inputRef = useRef(null); // Reference til direkte at manipulere DOM-elementet i inputfeltet.
-
-  useEffect(() => {
-    inputRef;
-  }, []);
-
   // her laver vi knapperne som åbner og lukker modalen
   const openModal = () => setIsModalOpen(true); // Funktion til at åbne modal-vinduet og lukke den nedenunder.
-
   const closeModal = () => setIsModalOpen(false);
-
-  const handleInputChange = (e) => {
-    setInputValue(e.target.value); // Opdaterer "inputValue" state, hver gang brugeren skriver i inputfeltet.
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Forhindrer siden i at reloade ved formularens submit (som er deafault).
@@ -43,7 +32,6 @@ const Newsletter = () => {
       const result = await response.json();
 
       openModal(); // Åbner modal-vinduet efter succesfuld tilmelding.
-
       setInputValue(""); // Rydder inputfeltet.
       setIsLoading(false); // Sætter "isLoading" tilbage til false, når kaldet er færdigt.
     } catch (error) {
@@ -61,13 +49,13 @@ const Newsletter = () => {
             type="text"
             placeholder="Fulde navn"
             value={inputName}
-            onChange={handleInputChange}
+            onChange={(e) => setInputName(e.target.value)}
           />
           <input
             type="email"
             placeholder="Email"
             value={inputValue}
-            onChange={handleInputChange}
+            onChange={(e) => setInputValue(e.target.value)}
           />
 
           <textarea type="text" placeholder="Hvem køber du legetøj til?" />
