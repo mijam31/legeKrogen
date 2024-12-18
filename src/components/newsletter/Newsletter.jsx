@@ -4,45 +4,50 @@ import Modal from "../modal/Modal";
 import Loading from "../loading/Loading";
 
 const Newsletter = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); // State til at holde styr på, om der er en igangværende operation
 
-  const [inputValue, setInputValue] = useState("");
-  const [inputName, setInputName] = useState("");
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [inputValue, setInputValue] = useState(""); // State til at holde værdien af inputfeltet.
 
-  const inputRef = useRef(null);
+  const [inputName, setInputName] = useState(""); // State til at holde et navn inputværdi
+
+  const [isModalOpen, setIsModalOpen] = useState(false); // State til at styre, om modal-vinduet er åbent eller lukket.
+
+  const inputRef = useRef(null); // Reference til direkte at manipulere DOM-elementet i inputfeltet.
 
   useEffect(() => {
     inputRef;
   }, []);
 
   // her laver vi knapperne som åbner og lukker modalen
-  const openModal = () => setIsModalOpen(true);
+  const openModal = () => setIsModalOpen(true); // Funktion til at åbne modal-vinduet og lukke den nedenunder.
+
   const closeModal = () => setIsModalOpen(false);
 
   const handleInputChange = (e) => {
-    setInputValue(e.target.value);
+    setInputValue(e.target.value); // Opdaterer "inputValue" state, hver gang brugeren skriver i inputfeltet.
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Forhindrer siden i at reloade ved formularens submit (som er deafault).
 
     try {
-      setIsLoading(true);
+      setIsLoading(true); // Sætter "isLoading" til true for at indikere, at et API-kald er i gang.
       const response = await fetch(
         "https://api-medieskolerne.vercel.app/emails",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email: inputValue }),
+          body: JSON.stringify({ email: inputValue }), // Sender inputValue som JSON-data
         }
       );
       const result = await response.json();
-      openModal();
-      setInputValue("");
-      setIsLoading(false);
+
+      openModal(); // Åbner modal-vinduet efter succesfuld tilmelding.
+
+      setInputValue(""); // Rydder inputfeltet.
+      setIsLoading(false); // Sætter "isLoading" tilbage til false, når kaldet er færdigt.
     } catch (error) {
-      console.error("Fejl ved tilmelding", error.message);
+      console.error("Fejl ved tilmelding", error.message); // Logger fejl, hvis API-kaldet mislykkes.
     }
   };
 

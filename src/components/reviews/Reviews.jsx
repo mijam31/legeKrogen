@@ -2,17 +2,18 @@ import { useState, useEffect } from "react";
 import styles from "./reviews.module.css";
 
 const Reviews = () => {
-  const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState([]); // State til at gemme listen af anmeldelser hentet fra API'et.
 
   const fetchReviews = async () => {
-    const response = await fetch("https://legekrogen.webmcdm.dk/reviews");
-    const data = await response.json();
-    setReviews(data);
+    // Funktion til at hente anmeldelser fra API'et.
+    const response = await fetch("https://legekrogen.webmcdm.dk/reviews"); // Gør et GET-kald til API-endpointet.
+    const data = await response.json(); // Konverterer API-svaret fra JSON.
+    setReviews(data); // Gemmer de hentede anmeldelser i `reviews` state.
   };
 
   useEffect(() => {
-    fetchReviews();
-  }, []);
+    fetchReviews(); // Kører `fetchReviews` én gang, når komponenten renderes første gang.
+  }, []); // Tom afhængighedsarray sikrer, at `useEffect` kun kører én gang.
 
   return (
     <section className={styles.reviews}>
