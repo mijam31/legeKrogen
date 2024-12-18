@@ -1,0 +1,70 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(/src/assets/heros/medlem.jpg);
+}
+
+.modalOverlay::after {
+  background-color: rgba(148, 120, 168, 0.79);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+  align-items: center;
+}
+
+.content h1 {
+  font-size: clamp(88px, 10vw, 96px);
+  font-family: "square peg", sans-serif;
+  font-weight: 400;
+}
+
+.content p {
+  width: 326px;
+  font-size: clamp(20px, 10vw, 20px);
+  font-weight: "quicksand", sans-serif;
+}
+
+.content button {
+  background-color: #355675;
+  padding: 16px 95px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.content button a {
+  text-decoration: none;
+  color: #ffffff;
+
+  font-size: calc(20px, 10vw, 20px);
+}

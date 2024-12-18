@@ -1,0 +1,56 @@
+.text h1 {
+  margin-bottom: 8px;
+  font-size: 86px;
+  font-family: "square peg", sans-serif;
+  font-weight: 500;
+  color: white;
+}
+
+.text h2 {
+  font-size: 77px;
+  font-family: "quicksand", sans-serif;
+  font-weight: 100;
+  color: white;
+}
+
+.text {
+  padding: 105px 0px 85px 0px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 70px;
+  column-gap: 47px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px 150px 20px;
+}
+
+@media screen and (max-width: 450px) {
+  .text h1 {
+    font-size: 55px;
+  }
+
+  .text h2 {
+    font-size: 59px;
+  }
+
+  .text {
+    padding: 70px 0px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .text h1 {
+    font-size: 36px;
+  }
+
+  .text h2 {
+    font-size: 40px;
+  }
+
+  .text {
+    padding: 70px 0px;
+  }
+}

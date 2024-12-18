@@ -1,0 +1,47 @@
+.header {
+  background-size: cover;
+  width: 100%;
+  height: 683px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-position: center;
+  position: relative;
+  justify-content: center;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(198, 178, 196, 0.68);
+  z-index: 1;
+}
+
+.contentLandingpage {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: clamp(64px, 10vw, 128px);
+  color: white;
+  font-family: "square peg", sans-serif;
+  font-weight: 400;
+}
+
+.header p {
+  font-size: clamp(20px, 5vw, 36px);
+  font-family: "quicksand", sans-serif;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 390px) {
+  .header {
+    height: 595px;
+  }
+}

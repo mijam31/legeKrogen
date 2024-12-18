@@ -1,0 +1,82 @@
+.question {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.accordion {
+  display: flex;
+  width: 80%;
+  text-align: start;
+  flex-direction: column;
+  border: 1px solid #355675;
+  border-radius: 25px;
+  padding: 20px;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.titleText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.titleText svg {
+  font-size: 37px;
+  color: #355675;
+}
+
+.titleText h2 {
+  font-size: 16px;
+  font-weight: 300;
+  color: #355675;
+}
+
+.lineclosed {
+  display: none;
+}
+
+.lineopen {
+  display: block;
+  height: 1px;
+  width: 90%;
+  background-color: #355675;
+}
+
+.answer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #355675;
+  transition: max-height 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.answer.closed {
+  max-height: 0;
+  opacity: 0;
+}
+
+.closed ol li {
+  display: none;
+}
+
+.answer.open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.answer ol {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.answer ol li {
+  margin-bottom: 10px;
+}

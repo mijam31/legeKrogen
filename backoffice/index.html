@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Legekrogen</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      h1 {
+        color: #333;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin: 10px 0;
+      }
+      a {
+        text-decoration: none;
+        color: #007bff;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>API Legekrogen</h1>
+    <p>Herunder er de forskellige endpoints:</p>
+    <ul>
+      <li>
+        <a href="/api/products">GET og POST /api/products</a> - Hent alle
+        produkter og/eller opret et nyt
+      </li>
+      <li>
+        <a href="/api/products/66e7185439fe4e3c129bc225"
+          >GET, DELETE og UPDATE /api/products/:id</a
+        >
+        - Hent, opdater eller slet et produkt via ID
+      </li>
+      <li>
+        <a href="/api/reviews">GET og POST /api/reviews</a> - Hent alle reviews
+        og/eller opret et nyt
+      </li>
+      <li>
+        <a href="/api/reviews/66e7185439fe4e3c129bc231"
+          >GET, DELETE og UPDATE /api/reviews/:id</a
+        >
+        - Hent, opdater eller slet et review via dets ID
+      </li>
+      <li>
+        <a href="/api/register">POST /api/register</a>
+        - Opret ny bruger
+      </li>
+      <li>
+        <a href="/api/login">POST /api/login</a>
+        - Login
+      </li>
+    </ul>
+  </body>
+</html>

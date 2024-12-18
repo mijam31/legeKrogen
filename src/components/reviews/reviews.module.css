@@ -1,0 +1,54 @@
+.reviews {
+  padding: 100px 20px;
+  background-color: aliceblue;
+}
+
+.reviews h1 {
+  font-size: 64px;
+  font-family: "square peg", sans-serif;
+  font-weight: 500;
+  color: #355675;
+}
+
+.reviews h2 {
+  font-size: 64px;
+  font-family: "quicksand", sans-serif;
+  font-weight: 300;
+  color: #355675;
+}
+
+.reviewContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+.reviewContent p {
+  font-size: 15px;
+  font-family: "be vietnam Pro", sans-serif;
+  font-weight: 500;
+  margin-bottom: 13px;
+}
+
+.reviewContent h3 {
+  font-size: 20px;
+  font-family: "advent pro", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 13px;
+}
+
+.reviews h2 {
+  margin-bottom: 36px;
+}
+
+.review1 {
+  max-width: 508px;
+}
+
+.review2 {
+  max-width: 532px;
+}
+.review3 {
+  max-width: 459px;
+}

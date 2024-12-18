@@ -1,0 +1,50 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 643px;
+  margin: 0 auto;
+  margin-top: 131px;
+  gap: 37px;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  padding: 14px 29px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  border: #355675 1px solid;
+}
+
+.form input[type="text"]::placeholder,
+.form input[type="email"]::placeholder,
+.form textarea::placeholder {
+  color: #355675;
+  font-family: "advent pro", sans-serif;
+  font-weight: extra-light;
+  font-style: italic;
+}
+
+.form button {
+  background-color: #355675;
+  color: white;
+  font-family: "inter", sans-serif;
+  font-weight: 400;
+  padding: 16px 0px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-bottom: 89px;
+  transition: 0.2s ease-in-out;
+}
+
+.form textarea {
+  margin-bottom: 42px;
+  resize: none;
+}
+
+.form button:hover {
+  background-color: #658fb7;
+  color: #fff;
+}
