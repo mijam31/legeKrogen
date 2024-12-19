@@ -6,11 +6,12 @@ import styles from "./_navigation.module.css";
 import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // State til at holde styr på, om menuen er åben eller lukket.
 
-  const pathname = useLocation();
+  const pathname = useLocation(); // Henter den aktuelle URL-sti fra React Router.
 
   useEffect(() => {
+    // Kører en effekt hver gang `pathname` ændrer sig.
     setIsOpen(false);
   }, [pathname]);
 

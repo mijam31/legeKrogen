@@ -6,7 +6,7 @@ import Loading from "../loading/Loading";
 const Newsletter = () => {
   const [isLoading, setIsLoading] = useState(false); // State til at holde styr på, om der er en igangværende operation
 
-  const [inputValue, setInputValue] = useState(""); // State til at holde værdien af inputfeltet.
+  const [inputValue, setInputValue] = useState(""); // State til at holde værdien af email inputfeltet.
 
   const [inputName, setInputName] = useState(""); // State til at holde et navn inputværdi
 

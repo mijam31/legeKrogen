@@ -11,7 +11,7 @@ const useFetchProducts = () => {
     try {
       setIsLoading(true); // Sætter `isLoading` til true, mens produkterne hentes.
       const response = await fetch("https://legekrogen.webmcdm.dk/products"); // Gør et GET-kald til API-endpointet.
-      const data = await response.json(); // Konverterer API-svaret fra JSON.
+      const data = await response.json(); // Konverterer API-svaret til JSON.
       setProducts(data); // Gemmer de hentede produkter i `products` state.
     } catch (error) {
       setError(error.message); // Gemmer fejlmeddelelsen i `error` state, hvis der opstår fejl.
